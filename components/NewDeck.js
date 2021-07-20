@@ -8,7 +8,6 @@ const NewDeck = () => {
   const [title, setTitle] = useState('');
 
   const handleSubmit = () => {
-    console.log('title: ', title);
     const deck = {
       id: generateGuid(),
       title,

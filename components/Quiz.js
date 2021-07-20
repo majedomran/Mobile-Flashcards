@@ -24,8 +24,9 @@ const Quiz = ({ navigation }) => {
   }, []);
   useEffect(() => {
     if (cards) {
-      if (cards.length - (value + 1) < 0) setPage('done');
-      else {
+      if (cards.length - (value + 1) < 0) {
+        setPage('done');
+      } else {
         setPage('');
       }
     }
@@ -62,7 +63,9 @@ const Quiz = ({ navigation }) => {
           <Text> Questions remaining: {cards.length - value}</Text>
           <Text> Question: {cards[value]?.question}</Text>
 
-          {show === 'show' ? <Text> Answer: {cards[value].answer}</Text> : null}
+          {show === 'show' && cards.length - (value + 1) >= 0 ? (
+            <Text> Answer: {cards[value].answer}</Text>
+          ) : null}
 
           <Button
             onPress={() => {
