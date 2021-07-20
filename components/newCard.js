@@ -12,8 +12,6 @@ const Deck = () => {
     const [question, setQuestion] = useState('')
     const [answer, setAnswer] = useState('')
     const handleSubmit = () => {
-        console.log('questtion: ',question);
-        console.log('answer: ',answer);
         disptach(addCardAction({id:currentDeck,card: {id: generateGuid(), question, answer}}))
     }
     return (
