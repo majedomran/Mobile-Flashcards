@@ -24,6 +24,13 @@ used redux toolkit to be up to date with the newest technoligies out there
         this action is for adding a card to a cetian deck by providing the id of the deck and a new id for the card
 
 *to start the app type in the command line*
-*yarn*
-then
-*yarn start*
+$ yarn 
+$ yarn start
+
+*or*
+
+npm install 
+npm start
+
+-   platforms tested : 
+    -   vertual Pixel 3 Android 10
